@@ -3,157 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vortexedge Technology | Technology Solution Provider </title>
+  <title>Vortexedge Procurement | Procurement Solution Provider</title>
+
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
-    body {color: #222; line-height: 1.6;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #222;
+      line-height: 1.6;
+    }
+
     header {
-      background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-      height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center; color: white; position: relative;
+      background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
     }
+
     header::after {
-      content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5); z-index: 0;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
     }
-    header h1, header p, header a {position: relative; z-index: 1;}
-    header h1 {font-size: 2.6rem; letter-spacing: 2px;}
-    header p {margin: 10px 0 20px; font-size: 1.2rem;}
+
+    header h1,
+    header p,
+    header a {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin: 10px 0 20px;
+      font-size: 1.2rem;
+    }
+
     .btn {
-      text-decoration: none; padding: 12px 25px; background: #f9b234; color: #000; border-radius: 25px;
-      margin: 5px; transition: 0.3s; font-weight: 600;
+      text-decoration: none;
+      padding: 12px 28px;
+      background: #f9b234;
+      color: #000;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: 0.3s;
     }
-    .btn:hover {background: #fff; color: #333;}
-    section {padding: 60px 20px; max-width: 1100px; margin: auto;}
-    .about {text-align: center;}
-    .about h2 {color: #333; margin-bottom: 20px;}
-    .properties {background: #f7f7f7;}
-    .property-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; margin-top: 30px;
+
+    .btn:hover {
+      background: #fff;
     }
-    .property {
-      background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
-    .property img {width: 100%; height: 200px; object-fit: cover; cursor: pointer;}
-    .property-content {padding: 20px;}
-    .property-content h3 {margin-bottom: 10px; color: #333;}
-    .property-content p {font-size: 0.95rem;}
-    .services {text-align: center;}
-    .services h2 {margin-bottom: 20px;}
-    .service-list {display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;}
-    .service {
-      background: #f9b234; color: #000; padding: 20px; border-radius: 10px; width: 230px;
-      font-weight: 500; transition: 0.3s;
+
+    .about {
+      text-align: center;
     }
-    .service:hover {background: #fff; border: 2px solid #f9b234;}
-    .gallery {background: #fff; text-align: center;}
-    .gallery h2 {margin-bottom: 20px;}
-    .gallery-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;
+
+    .about h2 {
+      margin-bottom: 20px;
     }
-    .gallery-grid img {
-      width: 100%; height: 180px; object-fit: cover; border-radius: 8px;
-      transition: 0.3s; cursor: pointer;
+
+    .about p {
+      margin-bottom: 12px;
     }
-    .gallery-grid img:hover {transform: scale(1.05);}
-    .contact {text-align: center;}
-    .contact h2 {margin-bottom: 20px;}
-    .contact a {color: #f9b234; text-decoration: none; font-weight: 600;}
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+    }
+
     .inquiry-form {
-      margin-top: 30px; max-width: 600px; margin-inline: auto; background: #f7f7f7;
-      padding: 30px; border-radius: 10px; text-align: left; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-top: 30px;
+      max-width: 600px;
+      margin-inline: auto;
+      background: #f7f7f7;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    .inquiry-form input, .inquiry-form textarea {
-      width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;
+
+    .inquiry-form h3 {
+      margin-bottom: 15px;
+      text-align: center;
     }
+
+    .inquiry-form input,
+    .inquiry-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
     .inquiry-form button {
-      background: #f9b234; border: none; color: #000; padding: 12px 25px;
-      border-radius: 25px; cursor: pointer; font-weight: 600; transition: 0.3s;
+      width: 100%;
+      background: #f9b234;
+      border: none;
+      color: #000;
+      padding: 12px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
     }
-    .inquiry-form button:hover {background: #111; color: #fff;}
-    footer {background: #111; color: #ccc; text-align: center; padding: 20px 10px;}
-    footer a {color: #f9b234; text-decoration: none;}
-    #popup {
-      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999;
+
+    .inquiry-form button:hover {
+      background: #111;
+      color: #fff;
     }
-    #popup img {max-width: 90%; max-height: 80%; border-radius: 10px;}
-    #popup span {
-      position: absolute; top: 30px; right: 50px; font-size: 2rem; color: #fff; cursor: pointer;
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #f9b234;
+      text-decoration: none;
     }
   </style>
 </head>
+
 <body>
 
+  <!-- HERO -->
   <header>
     <h1>VORTEXEDGE TECHNOLOGY</h1>
     <p>Technology for You || Enter the Vortex </p>
-    
     <a href="#contact" class="btn">Contact Us</a>
   </header>
 
+  <!-- ABOUT -->
   <section class="about" id="about">
-    <h2>ABOUT VORTEXEDGE TECHNOLOGY</h2>
+    <h2>About Vortexedge Technology</h2>
     <p> Vortexedge Technology is a trusted technology & management Solutions Provide. An arm of Vortexedge Limited, We specialize in:
     <p>✔ website development</p>
-   
     <p>✔ Business Software & Web Apps Development</p>
 <p>✔ Business Digital Transformation </p>
 <p>✔ Payment, Automation & Reporting Systems</p>
 <p>IT Advisory & Business Process Optimization</p>
     Our mission is to make Technology ownership simple, transparent, and rewarding for everyone.</p>
-    <p style="margin-top: 15px;">
+  </section>
 
- <p>Have questions or want to schedule a visit?</p>
+  <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
 
+    
+      <strong>Talk to us — we’re ready to help.</strong>
+    </p>
+
     <div class="inquiry-form">
-      <h3> Inquiry Form</h3>
-      <form id="inquiryForm" onsubmit="sendToWhatsApp(event)">
+      <h3>Inquiry Form</h3>
+
+      <form onsubmit="sendMessage(event)">
         <input type="text" id="name" placeholder="Your Name" required>
-        <textarea id="message" rows="4" placeholder="What can we do for you? " required></textarea>
-        <button type="submit">Send</button>
+        <textarea id="message" rows="4" placeholder="What can we do for you?" required></textarea>
+        <button type="submit">Send Message</button>
       </form>
     </div>
-  </section>
-<section>         <p>
-      📞 <strong>Phone:</strong> +2347048069238 | <strong>email:</strong> vortexedgelimited@gmail.com +2347048069238
-      📍 <strong> | Address:</strong> 57, Kunai Street,Sabo Tasha,Kaduna, Kaduna State Nigeria.
+
+    <p style="margin-top: 30px;">
+      📞 <strong>Phone:</strong> +2347048069238 <br>
+      📧 <strong>Email:</strong> vortexedgelimited@gmail.com <br>
+      📍 <strong>Address:</strong> 57 Kunai Street, Sabo Tasha, Kaduna, Nigeria
     </p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <p>© Vortexedge Limited | All Rights Reserved</p>
-    <p>Follow us on 
-      <a href="#">Facebook</a> | 
-      <a href="#">Instagram</a> | 
+    <p>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
       <a href="#">Twitter</a>
     </p>
   </footer>
 
-  <div id="popup">
-    <span onclick="closePopup()">&times;</span>
-    <img src="" alt="Popup">
-  </div>
-
+  <!-- SCRIPT -->
   <script>
-    function showPopup(src) {
-      const popup = document.getElementById("popup");
-      const popupImg = popup.querySelector("img");
-      popupImg.src = src;
-      popup.style.display = "flex";
-    }
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-
-    function sendToWhatsApp(event) {
+    function sendMessage(event) {
       event.preventDefault();
+
       const name = document.getElementById("name").value;
-      
       const message = document.getElementById("message").value;
-      const phone = "2347035810795";
-      const url = `https://wa.me/${phone}?text=Hello% Vortexedge%20Technology!%0A%0AMy%20Name:%20${encodeURIComponent(name)}%0AInterested%20In:%20${encodeURIComponent(property)}%0AMessage:%20${encodeURIComponent(message)}`;
-      window.open(url, "_blank");
+
+      const phone = "2347048069238";
+      const email = "vortexedgelimited@gmail.com";
+
+      const whatsappText =
+        "Hello Vortexedge Procurement,%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Message: " + message;
+
+      const whatsappURL =
+        "https://wa.me/" + phone + "?text=" + whatsappText;
+
+      const emailURL =
+        "mailto:" + email +
+        "?subject=New Procurement Inquiry" +
+        "&body=Name: " + name + "%0A%0AMessage:%0A" + message;
+
+      window.open(whatsappURL, "_blank");
+      setTimeout(() => {
+        window.location.href = emailURL;
+      }, 800);
     }
   </script>
 
